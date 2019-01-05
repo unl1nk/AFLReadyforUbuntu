@@ -23,6 +23,7 @@ wget http://lcamtuf.coredump.cx/afl/releases/afl-latest.tgz
 tar xzf afl-latest.tgz
 rm -rf afl-latest.tgz
 
+
 # Installing AFL Fuzzer & Set-up LLVM Mode
 
 cd ~/afl-*
@@ -36,3 +37,9 @@ cd ~/afl-*/llvm_mode
 LLVM_CONFIG=llvm-config-3.8 make
 cd ../
 sudo make install
+
+
+# Core Pattern Thing
+
+su root
+echo core >/proc/sys/kernel/core_pattern
